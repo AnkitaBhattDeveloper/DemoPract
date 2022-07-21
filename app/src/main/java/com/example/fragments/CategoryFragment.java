@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,8 +26,8 @@ import java.util.ArrayList;
 public class CategoryFragment extends Fragment {
 
     FragmentCategoryBinding binding;
-    CategoryAdapter categoryAdapter;
-    ArrayList<String> aList;
+
+    ArrayList<String> aList = new ArrayList<>();
     Context context;
 
 
@@ -68,10 +69,26 @@ public class CategoryFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+      subCategory();
+    }
 
-        //categoryAdapter = new CategoryAdapter(aList,);
 
-
+    public void subCategory()
+    {
+        CategoryAdapter categoryAdapter = new CategoryAdapter(requireContext(),aList);
+        binding.rvCategory.setLayoutManager(new LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false));
+        binding.rvCategory.setAdapter(categoryAdapter);
+        aList.add("");
+        aList.add("");
+        aList.add("");
+        aList.add("");
+        aList.add("");
+        aList.add("");
+        aList.add("");
+        aList.add("");
+        categoryAdapter.notifyDataSetChanged();
+        binding.rvCategory.hasFixedSize();
 
     }
+
 }

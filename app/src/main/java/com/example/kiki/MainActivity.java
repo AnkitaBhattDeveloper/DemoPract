@@ -1,6 +1,7 @@
 package com.example.kiki;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,20 +27,19 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         context = this;
-       replaceFragment(new HomeFragment());
+        replaceFragment(new HomeFragment());
 
 
 
         binding.bottomNav.setOnItemSelectedListener(item -> {
-            switch (item.getItemId())
-            {
+            switch (item.getItemId()) {
                 case R.id.home:
                     replaceFragment(new HomeFragment());
                     break;
-               case R.id.category:
+                case R.id.category:
                     replaceFragment(new CategoryFragment());
                     break;
-                 case R.id.notification:
+                case R.id.notification:
                     replaceFragment(new NotificationFragment());
                     break;
                 case R.id.account:
@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.cart:
                     replaceFragment(new CartFragment());
                     break;
-                //default:replaceFragment(new HomeFragment());
+                default:
+                    replaceFragment(new HomeFragment());
             }
 
 
@@ -56,13 +57,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
-    public  void replaceFragment(Fragment fragment)
-    {
+
+    public void replaceFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.container,fragment).commit();
+        ft.replace(R.id.container, fragment).commit();
     }
 
 

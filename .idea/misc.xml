@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hp-pc/DemoPract/adminapp/src/main/res/layout/activity_main.xml" value="0.2586050724637681" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/category_layout.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_category.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_home.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_notification.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_categories_layout.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_post_layout.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_slider_layout.xml" value="0.25226449275362317" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2625" />
         <entry key="app/src/main/res/layout/activity_login2.xml" value="0.2625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2625" />
