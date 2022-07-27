@@ -7,21 +7,30 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.adapter.CartAdapter;
+import com.example.data.CartItemModel;
 import com.example.kiki.databinding.BottomSheetBinding;
 import com.example.kiki.databinding.FragmentCartBinding;
 import com.example.App.Constants;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+
+import java.util.ArrayList;
 
 public class CartFragment extends Fragment {
 
     FragmentCartBinding binding;
     BottomSheetBinding bottomSheetBinding;
     Constants constants;
+    ArrayList<CartItemModel> cartItemList = new ArrayList<>();
+
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -30,7 +39,7 @@ public class CartFragment extends Fragment {
     private String mParam2;
 
     public CartFragment() {
-        // Required empty public constructor
+
     }
 
 
@@ -63,16 +72,25 @@ public class CartFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        cartAdapter();
 
-        binding.btnPayment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                bottomSheet();
-            }
-        });
+
     }
 
-    public void bottomSheet() {
+    public void cartAdapter() {
+        CartAdapter cartAdapter = new CartAdapter(requireContext(), cartItemList);
+        binding.rvCart.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
+        cartItemList.add(new CartItemModel("", "zara", "asjjfdjdff", "1223222"));
+        binding.rvCart.setAdapter(cartAdapter);
+        binding.rvCart.hasFixedSize();
+    }
+
+
+
+
+
+
+   /* public void bottomSheet() {
 
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getContext());
         bottomSheetBinding = BottomSheetBinding.inflate(getLayoutInflater());
@@ -107,6 +125,6 @@ public class CartFragment extends Fragment {
 
             }
         });
-    }
+    }*/
 
 }

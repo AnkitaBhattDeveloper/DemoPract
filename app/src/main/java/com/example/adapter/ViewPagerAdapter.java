@@ -10,9 +10,12 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.kiki.R;
-import com.example.kiki.databinding.WelcomeLayoutBinding;
 
+import com.example.data.SliderModel;
+import com.example.kiki.R;
+
+
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class ViewPagerAdapter extends PagerAdapter {
@@ -45,14 +48,12 @@ public class ViewPagerAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-         itemview = layoutInflater.inflate(R.layout.welcome_layout, container, false);
+        itemview = layoutInflater.inflate(R.layout.welcome_layout, container, false);
         ImageView welcome_image = (ImageView) itemview.findViewById(R.id.welcome_image);
-        welcome_image.setImageResource(images[position]);
+        welcome_image.setImageResource(R.drawable.clothes);
         Objects.requireNonNull(container).addView(itemview);
         return itemview;
     }
-
-
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((LinearLayout) object);

@@ -4,13 +4,32 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/hp-pc/DemoPract/adminapp/src/main/res/layout/activity_main.xml" value="0.2586050724637681" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.225" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_main.xml" value="0.2586050724637681" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_product_detail.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_welcome.xml" value="0.2586050724637681" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/cart_layout.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/category_layout.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_account.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_cart.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_category.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_category2.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_checkout.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_home.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_notification.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_product_description.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_product_specification.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_profuct_information_feagment.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_sub_category.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_categories_layout.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_post_layout.xml" value="0.25226449275362317" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_slider_layout.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/page1.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/page2.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/page3.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/sub_category_layout.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.225" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.225" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2625" />
         <entry key="app/src/main/res/layout/activity_login2.xml" value="0.2625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2625" />

@@ -8,13 +8,17 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.adapter.ViewPagerAdapter;
+import com.example.data.SliderModel;
 import com.example.kiki.databinding.ActivityWelcomeBinding;
+
+import java.util.ArrayList;
 
 public class WelcomeActivity extends AppCompatActivity {
     ActivityWelcomeBinding binding;
     //ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
     Context context;
+    int[] images;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +26,14 @@ public class WelcomeActivity extends AppCompatActivity {
         binding = ActivityWelcomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         context = this;
-        int[] images = {R.drawable.ecomdemo, R.drawable.ecomdemo, R.drawable.ecomdemo};
+        images = new int[]{R.drawable.images1,R.drawable.images2,R.drawable.images3,R.drawable.images4};
         viewPagerAdapter = new ViewPagerAdapter(this, images);
         binding.pager.setAdapter(viewPagerAdapter);
 
         binding.skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(context,LoginActivity.class));
+                startActivity(new Intent(context, LoginActivity.class));
                 finish();
             }
         });
