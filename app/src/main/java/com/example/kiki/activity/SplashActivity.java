@@ -1,4 +1,4 @@
-package com.example.kiki;
+package com.example.kiki.activity;
 
 import android.content.Context;
 import android.content.Intent;

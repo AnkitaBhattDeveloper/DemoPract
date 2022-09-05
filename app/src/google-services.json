@@ -7,6 +7,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:403679456223:android:d88ccff49db55e9880f26a",
+        "android_client_info": {
+          "package_name": "com.example.adminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403679456223-9qut06mv8dcgapituojcebnr7g8ct1tv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adminapp",
+            "certificate_hash": "8d265e9df019b8edbf15ffb585a9a5f01c21fee7"
+          }
+        },
+        {
+          "client_id": "403679456223-80l5p7tqh3got01a0n72c8q4bbcqm3k1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBARq4YgGnd8-vfFh6tRrHiL1i7uKBP5tY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403679456223-80l5p7tqh3got01a0n72c8q4bbcqm3k1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:403679456223:android:d5fca19bd5082b9b80f26a",
         "android_client_info": {
           "package_name": "com.example.kiki"

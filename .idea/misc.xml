@@ -5,8 +5,14 @@
       <map>
         <entry key="..\:/Users/hp-pc/DemoPract/adminapp/src/main/res/layout/activity_main.xml" value="0.2586050724637681" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.225" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/drawable/round_corner.xml" value="0.225" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/account_layout.xml" value="0.22" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_complete_profile.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_main.xml" value="0.2586050724637681" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_mobile_verification.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_product_detail.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_signup.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/activity_welcome.xml" value="0.2586050724637681" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/cart_layout.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/category_layout.xml" value="0.25226449275362317" />
@@ -16,6 +22,7 @@
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_category2.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_checkout.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_home.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_items.xml" value="0.24456521739130435" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_notification.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_product_description.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/fragment_product_specification.xml" value="0.22554347826086957" />
@@ -24,10 +31,16 @@
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_categories_layout.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_post_layout.xml" value="0.25226449275362317" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/home_slider_layout.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/items_layout.xml" value="0.24456521739130435" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/notification_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/otp_layout.xml" value="0.271875" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/page1.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/page2.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/page3.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/sub_category_layout.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/total_cart_item_price.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/total_cart_item_price_layout.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/layout/welcome_layout.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.225" />
         <entry key="..\:/Users/hp-pc/DemoPract/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.225" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2625" />
@@ -49,7 +62,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -1,20 +1,27 @@
-package com.example.fragments;
+package com.example.kiki.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.kiki.R;
+import com.example.kiki.adapter.AccountAdapter;
 import com.example.kiki.databinding.FragmentAccountBinding;
+
+import java.util.ArrayList;
 
 
 public class AccountFragment extends Fragment {
 
   FragmentAccountBinding binding;
+  ArrayList<String> acc_list = new ArrayList<>();
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -27,14 +34,6 @@ public class AccountFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AccountFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static AccountFragment newInstance(String param1, String param2) {
         AccountFragment fragment = new AccountFragment();
@@ -59,5 +58,22 @@ public class AccountFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding=FragmentAccountBinding.inflate(inflater,container,false);
         return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        AccountAdapter accountAdapter = new AccountAdapter(requireContext(),acc_list);
+        binding.rvAccount.setLayoutManager(new LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false));
+        acc_list.add("");
+        acc_list.add("");
+        acc_list.add("");
+        acc_list.add("");
+        acc_list.add("");
+        acc_list.add("");
+        acc_list.add("");
+        acc_list.add("");
+        binding.rvAccount.setAdapter(accountAdapter);
+
     }
 }

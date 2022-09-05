@@ -1,4 +1,4 @@
-package com.example.adapter;
+package com.example.kiki.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,11 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 
-import com.example.data.SliderModel;
 import com.example.kiki.R;
 
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class ViewPagerAdapter extends PagerAdapter {

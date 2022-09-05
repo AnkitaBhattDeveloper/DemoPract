@@ -1,4 +1,4 @@
-package com.example.data;
+package com.example.kiki.data;
 
 public class DataModel {
     String name,email,password,contact_number;

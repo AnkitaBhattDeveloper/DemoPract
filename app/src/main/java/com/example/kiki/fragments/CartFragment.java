@@ -1,34 +1,38 @@
-package com.example.fragments;
+package com.example.kiki.fragments;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.example.adapter.CartAdapter;
-import com.example.data.CartItemModel;
+import com.example.kiki.App.Constants;
+import com.example.kiki.adapter.CartAdapter;
+import com.example.kiki.adapter.TotalCartItemPriceAdapter;
+import com.example.kiki.data.CartItemModel;
+import com.example.kiki.data.TotalCartPrice;
 import com.example.kiki.databinding.BottomSheetBinding;
 import com.example.kiki.databinding.FragmentCartBinding;
-import com.example.App.Constants;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.example.kiki.util.TotalAmountInterface;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class CartFragment extends Fragment {
+public class CartFragment extends Fragment implements TotalAmountInterface {
 
     FragmentCartBinding binding;
     BottomSheetBinding bottomSheetBinding;
     Constants constants;
     ArrayList<CartItemModel> cartItemList = new ArrayList<>();
+    List<TotalCartPrice> totalItemList = new ArrayList<>();
+    TotalCartPrice totalCart = new TotalCartPrice();
+
+    int sum, c, total = 0, getsum;
 
 
     private static final String ARG_PARAM1 = "param1";
@@ -49,6 +53,9 @@ public class CartFragment extends Fragment {
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
+
+        Log.e("TAG", "newInstance: " + param1);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -57,6 +64,14 @@ public class CartFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+
+            String item = getArguments().getString("item");
+            Log.e("TAG", "onCreate:  cart fragment " + item);
+
+
+            String itemPrice = getArguments().getString("ItemPrice");
+            Log.e("TAG", "onCreate:  cart fragment " + itemPrice);
+
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
@@ -73,21 +88,40 @@ public class CartFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         cartAdapter();
+        Totala();
 
 
     }
 
     public void cartAdapter() {
-        CartAdapter cartAdapter = new CartAdapter(requireContext(), cartItemList);
+        CartAdapter cartAdapter = new CartAdapter(requireContext(), cartItemList, this);
         binding.rvCart.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
-        cartItemList.add(new CartItemModel("", "zara", "asjjfdjdff", "1223222"));
+        cartItemList.add(new CartItemModel("", "a", "a", "1"));
+        cartItemList.add(new CartItemModel("", "b", "b", "2"));
+        cartItemList.add(new CartItemModel("", "c", "c", "3"));
+
+
         binding.rvCart.setAdapter(cartAdapter);
         binding.rvCart.hasFixedSize();
     }
 
+    public void Totala() {
+        TotalCartItemPriceAdapter totalCartItemPriceAdapter = new TotalCartItemPriceAdapter(requireContext(), totalItemList);
+        binding.totalPriceRv.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
+        totalItemList.add(new TotalCartPrice("Meloso", totalCart.getProductPrice()));
+        Log.e("TAG", "Totala: " + totalCart.getProductPrice());
 
+        binding.totalPriceRv.setAdapter(totalCartItemPriceAdapter);
+        binding.totalPriceRv.hasFixedSize();
 
+    }
 
+    @Override
+    public void cartValueUpdate(int sum) {
+        Log.e("TAG", "totalItemAdded: sum----> " + sum);
+        binding.TotalPrice.setText(sum + " Rs.");
+
+    }
 
 
    /* public void bottomSheet() {

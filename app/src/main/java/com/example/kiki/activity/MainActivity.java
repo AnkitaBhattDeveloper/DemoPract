@@ -1,21 +1,24 @@
-package com.example.kiki;
+package com.example.kiki.activity;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.fragments.CategoryFragment;
+import com.example.kiki.R;
+import com.example.kiki.fragments.AccountFragment;
+import com.example.kiki.fragments.CartFragment;
+import com.example.kiki.fragments.CategoryFragment;
+import com.example.kiki.fragments.HomeFragment;
+import com.example.kiki.fragments.ItemsFragment;
+import com.example.kiki.fragments.NotificationFragment;
+import com.example.kiki.fragments.SubCategoryFragment;
 import com.example.kiki.databinding.ActivityMainBinding;
-import com.example.fragments.AccountFragment;
-import com.example.fragments.CartFragment;
-import com.example.fragments.SubCategoryFragment;
-import com.example.fragments.HomeFragment;
-import com.example.fragments.NotificationFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,26 +34,37 @@ public class MainActivity extends AppCompatActivity {
 
         replaceFragment(new HomeFragment());
         String category_name = getIntent().getStringExtra("category_name");
+        String item_name = getIntent().getStringExtra("item");
 
 
-        Log.e("TAG", "onCreate: select category name"+category_name);
-        if (category_name!= null)
-        {
-            replaceFragment(new SubCategoryFragment().newInstance(getIntent().getStringExtra("name"),category_name));
+        Log.e("TAG", "onCreate: select category name" + category_name);
+        if (category_name != null) {
+            replaceFragment(new SubCategoryFragment().newInstance(getIntent().getStringExtra("category_name"), category_name));
+            binding.bottomNav.setVisibility(View.GONE);
+
         }
-        else
-        {
+       /* if (name != null)
+            replaceFragment(new SubCategoryFragment().newInstance(getIntent().getStringExtra("name"),name));*/
+
+        else {
             Log.e("TAG", "onCreate: select category");
+            binding.bottomNav.setVisibility(View.VISIBLE);
         }
 
-
+        if (item_name != null) {
+            replaceFragment(new ItemsFragment().newInstance(getIntent().getStringExtra("item"), item_name));
+            binding.bottomNav.setVisibility(View.GONE);
+        }
+        else {
+            Log.e("TAG", "onCreate: item is null");
+            binding.bottomNav.setVisibility(View.VISIBLE);
+        }
 
 
         binding.bottomNav.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.home:
                     replaceFragment(new HomeFragment());
-
 
                     break;
                 case R.id.category:

@@ -1,4 +1,4 @@
-package com.example.kiki;
+package com.example.kiki.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,11 +7,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.adapter.ViewPagerAdapter;
-import com.example.data.SliderModel;
+import com.example.kiki.R;
+import com.example.kiki.adapter.ViewPagerAdapter;
 import com.example.kiki.databinding.ActivityWelcomeBinding;
-
-import java.util.ArrayList;
 
 public class WelcomeActivity extends AppCompatActivity {
     ActivityWelcomeBinding binding;
