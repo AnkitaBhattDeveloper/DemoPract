@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_10dp"
+    android:elevation="@dimen/dimen_3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/items_image"
+            android:layout_width="@dimen/dimen_200dp"
+            android:layout_height="@dimen/dimen_200dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/items_name"
+            android:layout_width="@dimen/dimen_200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="fdgddfffdfdfddfdfd"
+            android:textSize="@dimen/dimen_13dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/items_desc"
+            android:layout_width="@dimen/dimen_200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="fdgddfffdfdfddfdfd"
+            android:textSize="@dimen/font_11sp" />
+
+        <TextView
+            android:id="@+id/items_price"
+            android:layout_width="@dimen/dimen_200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="$123"
+            android:textSize="@dimen/dimen_13dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

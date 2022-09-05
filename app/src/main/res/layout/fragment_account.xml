@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.AccountFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/dimen_100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_100dp"
+        android:src="@drawable/main_logo" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:src="@drawable/main_logo"
+        android:text="Kiki"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/user_tel_no."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:src="@drawable/main_logo"
+        android:text="78956666690"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_18sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_20dp" />
+</LinearLayout>
